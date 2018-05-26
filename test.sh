@@ -2,7 +2,7 @@
 
 echo "Resetting the database..."
 rm -f app.db
-flask db upgrade 2>/dev/null
+flask db upgrade
 
 echo "Add a user..."
 http -b POST http://localhost:5000/users name=john >/dev/null
